@@ -8,13 +8,18 @@ project:
 
 book:
   # Metadata (fill this in):
-  repo-url: "https://github.com/ucdavisdatalab/WORKSHOP_NAME"
-  title: "WORKSHOP_TITLE"
+  repo-url: "https://github.com/ucdavisdatalab/workshop_quarto_accessibility"
+  title: "How to Improve Accessibility of Datalab Workshops"
   author:
-    - "AUTHOR_NAME"
+    - "Wesley Brooks"
   chapters:
     - "index.qmd"
     # List your chapters in order here.
+    - "chapters/01_principles.qmd"
+    - "chapters/02_technologies.qmd"
+    - "chapters/03_design_considerations.qmd"
+    - "chapters/04_audit_of_r_basics.qmd"
+    - "chapters/05_solutions.qmd"
     - "chapters/references.qmd"
     - "chapters/assessment.qmd"
 
@@ -30,6 +35,9 @@ format:
   html:
     theme: cosmo
     toc: true
+    sploot: splat
+    template-partials: 
+      - "templates/toc.html"
   # Uncomment to also generate a PDF:
   # pdf: default
 

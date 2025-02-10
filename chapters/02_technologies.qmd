@@ -1,0 +1,59 @@
+Technologies for Accessibility
+====================================
+
+Creating and using accessible web pages uses some technologies that may be unfamiliar to most of us. 
+
+## Keyboard Interface
+For most people, the main way to use the web is via a browser with a point-and-click interface. This is problematic for people with disabilities that limit their vision and/or use of their hands. Therefore, a **keyboard interface** is the main way of using the web for a large number of people with common disabilities. Thus, an important part of accessible web design is ensuring that you build a site that can be used with only the keyboard and no mouse. The most common keyboard commands for the web are: 
+
+- Arrow keys: Scroll the page.
+- Tab: Moves to the next link, button, or form control in sequence.
+- Space bar: If reading text, scroll down by a full screen. If a link or button is highlighted, hitting space "clicks" it.
+
+## Screen Reader
+People with vision disabilities often interact with their computers via a screen reader. Popular operating systems typically have a built-in screen reader and there are also some popular third-party screen readers. A screen reader is a program that reads text out loud and also describes contextual information, saying thigs like "this is an image", "this is a link", or "header level one". Screen readers also include special navigation menus that can be summoned with a key combination and then used to move through links or section headings or javascript buttons, etc.
+
+On macOS, the built-in screen reader is [VoiceOver](https://support.apple.com/guide/voiceover/welcome/mac). You can turn it on in the "Accessibility" pane of System Settings, or with the key combo Command-F5. A box will appear on top of all other windows that displays the text being read by VoiceOver. The easiest way to turn off VoiceOver is to click the "x" in the top-left of this box. VoiceOver is also the name of the scren reader built into iOS for mobile devices. It works differently on mobie devices, however, and those differences aren't actually relevant to site *design*.
+
+On Windows, the built-in screen reader is [Narrator](https://www.microsoft.com/en-us/windows/tips/narrator), which is activated by the key combo Control+Windows-Enter I don't know anything about it except that I've heard it works well and that screen readers are basically interchangeable.
+
+Linux distributions are all different, so the situation there is less clear but Ubuntu, at least, comes with the ([Orca](https://orca.gnome.org)) screen reader built in. Like with Narrator, I have no personal experience of Orca. 
+
+The most popular third-party screen readers are [JAWS](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](https://www.nvaccess.org/).
+
+### Using a Screen Reader
+The most basic function of a screen reader is to read text aloud to the user from the computer's display. Typically, someone reading one of our workshops would listen to one line of text then hit the down arrow to go to the next line and have the reader read it aloud to them. When the user arrives at an element that is not text, the screen reader tries to describe it to them. See the image for an example of the basic interface of VoiceOver. In the image, the line of text "searching, and running code. You can do all of these things without RStudio, but" is highlighted with a black box around the text and this same text appears in the floating VoiceOver window. VoiceOver reads this text aloud.
+
+![An image depicting the computer desktop of a user who is reading the Datalab's R Basics workshop. A line of text from the workshop is highlighted in the web browser and is also copied into a foating VoiceOver box.](../../images/voiceover.jpg)
+
+#### Alt Text and ARIA Attributes
+For example, when the user scrolls to an image, the screen reader will read the "[alt text](https://accessibility.huit.harvard.edu/describe-content-images)" of the image as if it were text in the place of the image. Alt text is also what is displayed in place of the image if the image fails to load. Therefore think of the alt text as the text appearing in place of the image. Since the browser and scren reader will know that the alt text is associted with a specific image, there is no need to include wind-up like "This is an image of...". The [Harvard alt text best practices](https://accessibility.huit.harvard.edu/describe-content-images) are wonderfuly clear and direct, so I will just reproduce them here:
+
+- Keep it short, usually 1-2 sentences. Don’t overthink it.
+- Consider key elements of why you chose this image, instead of describing every little detail.
+- No need to say “image of” or “picture of.”
+- But, do say if it’s a logo, illustration, painting, or cartoon.
+- Don’t duplicate text that’s adjacent in the document or website.
+- End the alt text sentence with a period.
+
+ARIA attributes are another way of inserting text descriptions for visual elements of a web page that are hidden to most users but that are used by screen readers. ARIA attributes are intended for controls like text input boxes and buttons (not links). Alt text is a better choice for images.
+
+#### Navigation Menus
+Screen readers incorporate navigation menus to faciitate quick navigation to important parts of the window. When used within a web browser, the navigaton menus allow the user to quickly move to section headings, links, buttons, etc. In VoiceOver, the navigation menu is called the "rotor", and is activated by the key combination Control+Option-U (assumes VoiceOver is already running). In Narrator, the navigation menu is activated with the key combo Caps Lock+F6. See the images for examples of how chapter one of the R Basics reader appears in the navigation menu.
+
+![Image of the section headings menu presented by VoiceOver on macOS. The headers are for chapter one of the Datalab's "R Basics" workshop, and include entries like "3: 1.2.4 Calling Functions Anchor" and "2 1.3 Getting Help Anchor".](../../images/headings_screenshot.jpg)
+
+![Image of the form controls menu presented by VoiceOver on macOS. There are controls for site search ("Submit button" and "Submit search text field") and several (about ten) appearances of controls called "Copy to clipboard button".](../../images/form_controls_screenshot.jpg)
+
+The navigation menus in VoiceOver on macOS are:
+- Headings
+- Form Controls
+- Tables
+- Landmarks
+- Window Spots
+- Links
+
+The user can navigate move up and down the list of options within a menu using the up and down arrows and move between navigation menus with the left and right arrows.
+
+## Braille Display
+A [Braille display](https://en.wikipedia.org/wiki/Refreshable_braille_display) is an evolution of the scren reader concept. It similarly expresses the content of the computer desktop in words rather than visually, but the words are not (only) spoken, they are also written in Braille on a small hardware device that is attached to the keyboard. It isn't really necessary to design specifically for a Braille display because it displays the same text as would be spoken by the screen reader and navigates using a keyboard interface. As long as the site is designed for a those technologies, it will be good for a Braille display.

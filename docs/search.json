@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "How to Improve Accessibility of Datalab Workshops",
+    "section": "",
+    "text": "Overview\n\n\n\n\n\n\nLearning Goals\n\n\n\nAfter completing this chapter, learners should be able to:\n\nYOUR LEARNING GOALS\n\n\n\nYOUR DESCRIPTION, PREREQUISITES, ETC",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "chapters/01_principles.html",
+    "href": "chapters/01_principles.html",
+    "title": "1  Principles of Accessible Web Content",
+    "section": "",
+    "text": "1.1 Guidelines\nAccessibility is an element of Web design that describes how a page can be used by people with disabilities such as blindness, deafness or color-blindness.\nI’m working to improve the accessibility of the R Basics workshop (with others to follow). This process begins by reviewing the workshop against the Word Wide Web Consortium (W3C)’s Web Content Accesility Guidelines (WCAG). There are 13 guidelines under four categories, and each guideline has accompanying test(s). The W3C also suggests techniques to address the guidelines.\nThe guidelines are:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Principles of Accessible Web Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_principles.html#guidelines",
+    "href": "chapters/01_principles.html#guidelines",
+    "title": "1  Principles of Accessible Web Content",
+    "section": "",
+    "text": "1.1.1 Perceivable\n\nProvide text alternatives for non-text content.\nProvide captions and other alternatives for multimedia.\nCreate content that can be presented in different ways, including by assistive technologies, without losing meaning.\nMake it easier for users to see and hear content.\n\n\n\n1.1.2 Operable\n\nMake all functionality available from a keyboard.\nGive users enough time to read and use content.\nDo not use content that causes seizures or physical reactions.\nHelp users navigate and find content.\nMake it easier to use inputs other than keyboard.\n\n\n\n1.1.3 Understandable\n\nMake text readable and understandable.\nMake content appear and operate in predictable ways.\nHelp users avoid and correct mistakes.\n\n\n\n1.1.4 Robust\n\nMaximize compatibility with current and future user tools.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Principles of Accessible Web Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_principles.html#resources",
+    "href": "chapters/01_principles.html#resources",
+    "title": "1  Principles of Accessible Web Content",
+    "section": "1.2 Resources",
+    "text": "1.2 Resources\nThere are extensive resources available that describe how to make web content accesible. Unfortunately, most link to an absolute fire hose of information, much of which is aimed at developers of complicated web applications. Datalab’s workshops are relatively simple web sites made up almost entirely of HTML and CSS with very little Javscript. That gives us a big head start in designing for accessibility but we still have to sort out what information is relevant. This web site will hopefully be all you need but the University of California’s guide to accessible web development is also a pretty good resource, written in mostly non-technical English. Since so much has been written on the subject, ChatGPT is quite good at answering specific questions like, “what is the difference between alt text and an ARIA label?” Finally, the Content Creator Essentials in the Harvard University Digital Accesibility Guide are great because they’re written siply and directly, with examples provided.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Principles of Accessible Web Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_technologies.html",
+    "href": "chapters/02_technologies.html",
+    "title": "2  Technologies for Accessibility",
+    "section": "",
+    "text": "2.1 Keyboard Interface\nCreating and using accessible web pages uses some technologies that may be unfamiliar to most of us.\nFor most people, the main way to use the web is via a browser with a point-and-click interface. This is problematic for people with disabilities that limit their vision and/or use of their hands. Therefore, a keyboard interface is the main way of using the web for a large number of people with common disabilities. Thus, an important part of accessible web design is ensuring that you build a site that can be used with only the keyboard and no mouse. The most common keyboard commands for the web are:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Technologies for Accessibility</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_technologies.html#keyboard-interface",
+    "href": "chapters/02_technologies.html#keyboard-interface",
+    "title": "2  Technologies for Accessibility",
+    "section": "",
+    "text": "Arrow keys: Scroll the page.\nTab: Moves to the next link, button, or form control in sequence.\nSpace bar: If reading text, scroll down by a full screen. If a link or button is highlighted, hitting space “clicks” it.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Technologies for Accessibility</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_technologies.html#screen-reader",
+    "href": "chapters/02_technologies.html#screen-reader",
+    "title": "2  Technologies for Accessibility",
+    "section": "2.2 Screen Reader",
+    "text": "2.2 Screen Reader\nPeople with vision disabilities often interact with their computers via a screen reader. Popular operating systems typically have a built-in screen reader and there are also some popular third-party screen readers. A screen reader is a program that reads text out loud and also describes contextual information, saying thigs like “this is an image”, “this is a link”, or “header level one”. Screen readers also include special navigation menus that can be summoned with a key combination and then used to move through links or section headings or javascript buttons, etc.\nOn macOS, the built-in screen reader is VoiceOver. You can turn it on in the “Accessibility” pane of System Settings, or with the key combo Command-F5. A box will appear on top of all other windows that displays the text being read by VoiceOver. The easiest way to turn off VoiceOver is to click the “x” in the top-left of this box. VoiceOver is also the name of the scren reader built into iOS for mobile devices. It works differently on mobie devices, however, and those differences aren’t actually relevant to site design.\nOn Windows, the built-in screen reader is Narrator, which is activated by the key combo Control+Windows-Enter I don’t know anything about it except that I’ve heard it works well and that screen readers are basically interchangeable.\nLinux distributions are all different, so the situation there is less clear but Ubuntu, at least, comes with the (Orca) screen reader built in. Like with Narrator, I have no personal experience of Orca.\nThe most popular third-party screen readers are JAWS and NVDA.\n\n2.2.1 Using a Screen Reader\nThe most basic function of a screen reader is to read text aloud to the user from the computer’s display. Typically, someone reading one of our workshops would listen to one line of text then hit the down arrow to go to the next line and have the reader read it aloud to them. When the user arrives at an element that is not text, the screen reader tries to describe it to them. See the image for an example of the basic interface of VoiceOver. In the image, the line of text “searching, and running code. You can do all of these things without RStudio, but” is highlighted with a black box around the text and this same text appears in the floating VoiceOver window. VoiceOver reads this text aloud.\n\n\n\nAn image depicting the computer desktop of a user who is reading the Datalab’s R Basics workshop. A line of text from the workshop is highlighted in the web browser and is also copied into a foating VoiceOver box.\n\n\n\n2.2.1.1 Alt Text and ARIA Attributes\nFor example, when the user scrolls to an image, the screen reader will read the “alt text” of the image as if it were text in the place of the image. Alt text is also what is displayed in place of the image if the image fails to load. Therefore think of the alt text as the text appearing in place of the image. Since the browser and scren reader will know that the alt text is associted with a specific image, there is no need to include wind-up like “This is an image of…”. The Harvard alt text best practices are wonderfuly clear and direct, so I will just reproduce them here:\n\nKeep it short, usually 1-2 sentences. Don’t overthink it.\nConsider key elements of why you chose this image, instead of describing every little detail.\nNo need to say “image of” or “picture of.”\nBut, do say if it’s a logo, illustration, painting, or cartoon.\nDon’t duplicate text that’s adjacent in the document or website.\nEnd the alt text sentence with a period.\n\nARIA attributes are another way of inserting text descriptions for visual elements of a web page that are hidden to most users but that are used by screen readers. ARIA attributes are intended for controls like text input boxes and buttons (not links). Alt text is a better choice for images.\n\n\n2.2.1.2 Navigation Menus\nScreen readers incorporate navigation menus to faciitate quick navigation to important parts of the window. When used within a web browser, the navigaton menus allow the user to quickly move to section headings, links, buttons, etc. In VoiceOver, the navigation menu is called the “rotor”, and is activated by the key combination Control+Option-U (assumes VoiceOver is already running). In Narrator, the navigation menu is activated with the key combo Caps Lock+F6. See the images for examples of how chapter one of the R Basics reader appears in the navigation menu.\n\n\n\nImage of the section headings menu presented by VoiceOver on macOS. The headers are for chapter one of the Datalab’s “R Basics” workshop, and include entries like “3: 1.2.4 Calling Functions Anchor” and “2 1.3 Getting Help Anchor”.\n\n\n\n\n\nImage of the form controls menu presented by VoiceOver on macOS. There are controls for site search (“Submit button” and “Submit search text field”) and several (about ten) appearances of controls called “Copy to clipboard button”.\n\n\nThe navigation menus in VoiceOver on macOS are: - Headings - Form Controls - Tables - Landmarks - Window Spots - Links\nThe user can navigate move up and down the list of options within a menu using the up and down arrows and move between navigation menus with the left and right arrows.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Technologies for Accessibility</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_technologies.html#braille-display",
+    "href": "chapters/02_technologies.html#braille-display",
+    "title": "2  Technologies for Accessibility",
+    "section": "2.3 Braille Display",
+    "text": "2.3 Braille Display\nA Braille display is an evolution of the scren reader concept. It similarly expresses the content of the computer desktop in words rather than visually, but the words are not (only) spoken, they are also written in Braille on a small hardware device that is attached to the keyboard. It isn’t really necessary to design specifically for a Braille display because it displays the same text as would be spoken by the screen reader and navigates using a keyboard interface. As long as the site is designed for a those technologies, it will be good for a Braille display.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Technologies for Accessibility</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_design_considerations.html",
+    "href": "chapters/03_design_considerations.html",
+    "title": "3  Design Considerations",
+    "section": "",
+    "text": "3.1 Perceivable\nRecall the WCAG principles from Chapter one. They fall under the main headings: perceivable, operable, understandable, and robust. Of the main headings, “understandable” and “robust” can be mostly passed over here. The guidelines for understandable web content are things we should be designing for in our workshops, with no changes needed specifically for accessibility. Robustness is only slightly more involved: Since we use very little interactivity built into our workshops, we have little exposure to the risk that our site will break when JavaScript libraries are updated or unavailable. The main thing to keep in mind about robustness is that we should use standard tools for accessible design so that we don’t rely on hacking into tools like Quarto or Jupyter Book to get our workshops to work properly.\nNow that we know how users with disabilities will read the workshop, so we are now ready to integrate that knowledge into a design that is perceivable and operable according to the WCAG guidelines.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Considerations</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_design_considerations.html#perceivable",
+    "href": "chapters/03_design_considerations.html#perceivable",
+    "title": "3  Design Considerations",
+    "section": "",
+    "text": "3.1.1 Data Visualiations\nOne element of accessible workshops is to make sure that images are perceivable by people with vision problems. When creating an image (for instance a data visualization) make sure that the text is large and that the color pallette is colorbind-friendly. Datalab has a whole chapter devoted to accessible data viz in our workshop “Principles of Data Visualization”. The chapter caled Principles of Visual Perception in that workshop also provides some advice about making data visualizations perceivable for everyone.\n\n\n3.1.2 Keyboard Interface\nMaking a workshop perceivable for users who use a keyboard interface means making sure that the user can navigate to all parts of the workshop and all the controls via the keyboard. Two things to avoid are creating a controls that are unreachable by hitting the Tab key, and creating a “tab loop” where the focus gets stuck in part of the page and can’t escape by continuing to hit the Tab key. These risks are generally minimal for us because we create simple pages without much interactivity. But it is nevertheless worth double checking what happens when you try to navigate through all controls on the site via the Tab key.\n\n\n3.1.3 Tables\nA lot of our workshops contain code chunks and tables. Here’s an example from R Basics. Generally, we have printed tables as the output of a code block, which wraps the table contents in a set of &lt;pre&gt;&lt;code&gt; ... &lt;/code&gt;&lt;/pre&gt; blocks. This has the benefit of making the output look exactly like what the user will see at the R console, but it isn’t accessible because the raw output has no metadata to describe how the raw text fits into rows and columns with headers and values. Assistive devices like screen readers have ways of describing tabular data as long as it is properly formatted as an HTML table. HTML tables don’t support alt text. Instead, they should have a &lt;caption&gt; ... &lt;/caption&gt; element for a basic title that is visible and announced by the screen reader, and ARIA attributes for more detailed desriptions that are hidden from view but are announced by screen readers. The caption element is written in markdown as a line that begins with a colon followed by the caption text. The University of California has a page of tips for making accesible data tables, which include a recommendation to use the &lt;summary&gt; ... &lt;/summary&gt; element. That element, however, was deprecated in more recent versions of the HTML spec. I think that finding satisfactory solutions for tables will be the most difficult part of redesigning our workshops for accessibility.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Considerations</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_audit_of_r_basics.html",
+    "href": "chapters/04_audit_of_r_basics.html",
+    "title": "4  Audit of R Basics Workshop",
+    "section": "",
+    "text": "4.1 Notes\nThe following are some notes that I generated in an accessibility review of the R Basics workshop. Ultimately, my goal is to identify which of these need fixing and find ways to fix them without adding friction to the workshop writing process. I was helped in this audit by Katherine Brafford, who is often in Datalab and who uses a screen reader to interact with her computer.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Audit of R Basics Workshop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_audit_of_r_basics.html#notes",
+    "href": "chapters/04_audit_of_r_basics.html#notes",
+    "title": "4  Audit of R Basics Workshop",
+    "section": "",
+    "text": "I’m finding that tab controls skip the content and just go to buttons.\nWe don’t have alt text for images\nWe have popup previews of the linked page when hovering on a link internal to the reader. I am not sure how this would interact with a reader or keyboard control.\nAll the code blocks have (often-)superfuous “copy to clipboard” buttons.\n\nThese are “code with copy” chunks. Can we convert them to not have copy?\n\n“content information” in the Landmarks rotor goes to the footer: pretty useless IMO\n\n\n4.1.1 Katherine’s thoughts:\n\nUses JAWS screen reader\n\nNVDA: free and fairly good - probably the best for testing\nNarrator is windows’ built-in: almost nobody uses it\nTalkback and Voiceover on Mac both good\n\n“Good that we use headings”\n\nSeem to be in right place and level (e.g., &lt;h4&gt;)\nJump between by “h” and keypad numbers for heading levels\n\nNext and back are links like other links on page\n\nBetter to have next and back buttons rather than links?\n\nLink labeling:\n\nlink list has a lot that are called, e.g., “here” and “anchor”\n\nImages\n\nMany not labeled\nCh 1.2: description behind first graphic literally describes image, which is a repeat of figure caption\nNext is following “You can make R compute the sum by typing the code 2 + 2 after the prompt and then pressing the Enter key. Your code and the result from R should look like this:” and is an image of R saying 2 plus 2 is 4.\nKatherine prefers text over images, but the image at least needs a description\n\n“Script error”s abound, seem related to math formatting (MathJax)\nSearch bar should be called search, give an idea of what it does\nThe table of contents being split makes it hard to navigte and use.\n\nToC has a heading level but the chapter list does not, makes it harder to find the navigation buttons\n\nGood to have “Navigation” heading so it is findable from link list\n“Form field” inputs: not very useful because there are so many “copy to clipboard” buttons\nKatherine likes button (not link) for next and back\nKatherine prefers gt() function over print.df()\nCan we get an alternate text description of tables (e.g. Section 3.1.2)? The reader doesn’t make sense when encountering text tables (this is why Katherine uses gt()).\nParagraphs are broken up in a weird way: 3.1.2 “DATA[ROWS, COLUMNS] For instance, let’s get the first 3 rows and all columns of the banknotes data:” is one paragraph. Also, this red box is one paragraph:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Audit of R Basics Workshop</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05_solutions.html",
+    "href": "chapters/05_solutions.html",
+    "title": "5  Solutions",
+    "section": "",
+    "text": "5.1 Recommended\nThe goal is to have effective solutions that don’t introduce a lot of new friction for the workshop developer. In general, each of our workshops are developed using one of three tools: bookdown or quarto for R-centric workshops, and Jupyter Book for Python-centric workshops. It has been dealer’s choice which of these to use for workshops that are not specifically about either R or Python. Nick prefers that we gravitate toward Jupyter Book for most workshops. This presentation was developed as part of a project to improve the accessibility of R Basics, which is an R workshop written in quarto. Some of these solutions, therefore, will have to be revisited for the design of the workshops written in Jupyter Book.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05_solutions.html#recommended",
+    "href": "chapters/05_solutions.html#recommended",
+    "title": "5  Solutions",
+    "section": "",
+    "text": "5.1.1 Add Alt Text to Images\nThis is an obvious necessity for accessibility. Unfortunately, the quarto deveopers ignored the markdown standard that says an image should be written in markdown as ![alt text goes here](path\\to\\image.jpg). Instead, quarto interprets the text in the square brackets as the image caption, and to add alt text you have to tag the image with the fig-alt attribute in curly brackets after the closing parenthesis. For example, the following image of a goose, when rendered in quarto, has the caption “Goose” and the alt text “Greylag goose in profile.”: ![Goose](images/goose.jpg){fig-alt='Greylag goose in profile.}\n\n\n\nGoose\n\n\n\n\n5.1.2 Add Alt Text to Plots\nThe above works fine for static images that you display via the markdown image syntax ![caption](path/to/image.jpg). However, when you dynamically generate a plot in an R code block it isn’t written in mardown syntax so the way to write alt text is different. In that case, you need to write the alt text as the fig-alt chunk option and the caption as the fig-cap chunk option. Here’s an example that uses ggplot2 to plot data from the palmerpenguins R package:\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\n\ndata(penguins)\n\nggplot(penguins) +\n    aes(x=bill_length_mm, y=body_mass_g, color=species) +\n    geom_point() +\n    xlab(\"Bill length (mm)\") +\n    ylab(\"Body mass (g)\") +\n    ggtitle(\"Body mass vs bill length for penguins\")\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\nScatterplot of body mass vs bill length for penguins of three species.\n\n\n\n\nPutting the plot’s title in the caption (“Scatterplot of body mass vs bill length for penguins of three species.”) rather than in the plot’s “title” element (“Body mass vs bill length for penguins”) is better for accessibility because the screen reader can read the former but not the latter.\n\n\n5.1.3 Use gt Package For Tables\nAs noted in Section @section-tables, the default output for R tables is to print them to the output as raw text. The R package gt offers the function gt() to format tabular data for HTML.\n\nlibrary(gt)\n\ngt(head(penguins))\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007\n\n\n\n\n\nFirst six rows of data from the penguins data frame.\n\n\n\n\n5.1.4 Navigation\nAfter doing a deep dive into Quarto, it looks like we will have a very hard time trying to give more meaningful names to the three navigation sections on the page. One of them is relatively simple: the definition of the Table of Contents, which provides links to navigate within the current page can be overridden by putting a file called toc.html in the list template-partials under the html format in the _quarto.yml file.\nUnfortunately, the other two nav sections are generated by embedded javascript (EJS) templates, rather than the more basic pandoc template that defines TOC. EJS templates can’t be overridden in the ite render process so the only way to change the sidebar and footer nav sections would be to replace the default template .pixi/envs/default/share/quarto/projects/website/templates/nav-after-body-postamble.ejs within Quarto’s file hierarchy, since that template is hard-coded into the site rendering process. This solution is not very robust because it would be wiped out any time someone installs or upgrades Quarto.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Solutions</span>"
+    ]
+  }
+]
