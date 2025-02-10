@@ -30,3 +30,7 @@ docs/*.md
 .Rproj.user
 
 /.quarto/
+
+# pixi environments
+.pixi
+*.egg-info
