@@ -8,7 +8,7 @@ The goal is to have effective solutions that don't introduce a lot of new fricti
 This is an obvious necessity for accessibility. Unfortunately, the quarto deveopers ignored the markdown standard that says an image should be written in markdown as `![alt text goes here](path\to\image.jpg)`. Instead, quarto interprets the text in the square brackets as the image *caption*, and to add alt text you have to [tag the image with the `fig-alt` attribute](https://quarto.org/docs/authoring/figures.html#alt-text) in curly brackets after the closing parenthesis. For example, the following image of a goose, when rendered in quarto, has the caption "Goose" and the alt text "Greylag goose in profile.":
 `![Goose](images/goose.jpg){fig-alt='Greylag goose in profile.}`
 
-![Goose](../../images/goose.jpg){fig-alt='Greylag goose in profile.'}
+![Goose](/images/goose.jpg){fig-alt='Greylag goose in profile.'}
 
 ### Add Alt Text to Plots
 The above works fine for static images that you display via the markdown image syntax `![caption](path/to/image.jpg)`. However, when you dynamically generate a plot in an R code block it isn't written in mardown syntax so the way to write alt text is different. In that case, you need to write the alt text as the `fig-alt` chunk option and the caption as the `fig-cap` chunk option. Here's an example that uses [`ggplot2`](https://ggplot2.tidyverse.org) to plot data from the [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/) R package:

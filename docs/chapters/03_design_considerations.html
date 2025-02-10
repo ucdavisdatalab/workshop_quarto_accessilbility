@@ -173,8 +173,12 @@ ul.task-list li input[type="checkbox"] {
     <li><a href="#perceivable" id="toc-perceivable" class="nav-link active" data-scroll-target="#perceivable"><span class="header-section-number">3.1</span> Perceivable</a>
     <ul class="collapse">
     <li><a href="#data-visualiations" id="toc-data-visualiations" class="nav-link" data-scroll-target="#data-visualiations"><span class="header-section-number">3.1.1</span> Data Visualiations</a></li>
-    <li><a href="#keyboard-interface" id="toc-keyboard-interface" class="nav-link" data-scroll-target="#keyboard-interface"><span class="header-section-number">3.1.2</span> Keyboard Interface</a></li>
-    <li><a href="#section-tables" id="toc-section-tables" class="nav-link" data-scroll-target="#section-tables"><span class="header-section-number">3.1.3</span> Tables</a></li>
+    <li><a href="#section-tables" id="toc-section-tables" class="nav-link" data-scroll-target="#section-tables"><span class="header-section-number">3.1.2</span> Tables</a></li>
+    </ul></li>
+    <li><a href="#operable" id="toc-operable" class="nav-link" data-scroll-target="#operable"><span class="header-section-number">3.2</span> Operable</a>
+    <ul class="collapse">
+    <li><a href="#keyboard-interface" id="toc-keyboard-interface" class="nav-link" data-scroll-target="#keyboard-interface"><span class="header-section-number">3.2.1</span> Keyboard Interface</a></li>
+    <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation"><span class="header-section-number">3.2.2</span> Navigation</a></li>
     </ul></li>
     </ul>
   <div class="toc-actions"><ul><li><a href="https://github.com/ucdavisdatalab/workshop_quarto_accessibility/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/ucdavisdatalab/workshop_quarto_accessibility/blob/main/chapters/03_design_considerations.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -209,13 +213,20 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="data-visualiations"><span class="header-section-number">3.1.1</span> Data Visualiations</h3>
 <p>One element of accessible workshops is to make sure that images are perceivable by people with vision problems. When creating an image (for instance a data visualization) make sure that the text is large and that the color pallette is colorbind-friendly. <a href="https://ucdavisdatalab.github.io/workshop_data_viz_principles/accessible-data-visualizations.html">Datalab has a whole chapter devoted to accessible data viz</a> in our workshop “Principles of Data Visualization”. The chapter caled <a href="https://ucdavisdatalab.github.io/workshop_data_viz_principles/principles-of-visual-perception.html">Principles of Visual Perception</a> in that workshop also provides some advice about making data visualizations perceivable for everyone.</p>
 </section>
-<section id="keyboard-interface" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="keyboard-interface"><span class="header-section-number">3.1.2</span> Keyboard Interface</h3>
-<p>Making a workshop perceivable for users who use a keyboard interface means making sure that the user can navigate to all parts of the workshop and all the controls via the keyboard. Two things to avoid are creating a controls that are unreachable by hitting the Tab key, and creating a “tab loop” where the focus gets stuck in part of the page and can’t escape by continuing to hit the Tab key. These risks are generally minimal for us because we create simple pages without much interactivity. But it is nevertheless worth double checking what happens when you try to navigate through all controls on the site via the Tab key.</p>
-</section>
-<section id="section-tables" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="section-tables"><span class="header-section-number">3.1.3</span> Tables</h3>
+<section id="section-tables" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="section-tables"><span class="header-section-number">3.1.2</span> Tables</h3>
 <p>A lot of our workshops contain code chunks and tables. Here’s <a href="https://ucdavisdatalab.github.io/workshop_r_basics/chapters/03_exploring-data.html#two-dimensional-indexing">an example from R Basics</a>. Generally, we have printed tables as the output of a code block, which wraps the table contents in a set of <code>&lt;pre&gt;&lt;code&gt; ... &lt;/code&gt;&lt;/pre&gt;</code> blocks. This has the benefit of making the output look exactly like what the user will see at the R console, but it isn’t accessible because the raw output has no metadata to describe how the raw text fits into rows and columns with headers and values. Assistive devices like screen readers have ways of describing tabular data <em>as long as it is properly formatted as an HTML table</em>. HTML tables don’t support alt text. Instead, they should have a <code>&lt;caption&gt; ... &lt;/caption&gt;</code> element for a basic title that is visible and announced by the screen reader, and ARIA attributes for more detailed desriptions that are hidden from view but are announced by screen readers. The <code>caption</code> element is written in markdown as a line that begins with a colon followed by the caption text. The University of California has a page of <a href="https://www.ucop.edu/electronic-accessibility/web-developers/advanced-tips/mark-up-data-tables-correctly.html">tips for making accesible data tables</a>, which include a recommendation to use the <code>&lt;summary&gt; ... &lt;/summary&gt;</code> element. That element, however, was deprecated in more recent versions of the HTML spec. I think that finding satisfactory solutions for tables will be the most difficult part of redesigning our workshops for accessibility.</p>
+</section>
+</section>
+<section id="operable" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="operable"><span class="header-section-number">3.2</span> Operable</h2>
+<section id="keyboard-interface" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="keyboard-interface"><span class="header-section-number">3.2.1</span> Keyboard Interface</h3>
+<p>Making a workshop operable for users who use a keyboard interface means making sure that the user can navigate to all parts of the workshop and all the controls via the keyboard. Two things to avoid are creating a controls that are unreachable by hitting the Tab key, and creating a “tab loop” where the focus gets stuck in part of the page and can’t escape by continuing to hit the Tab key. These risks are generally minimal for us because we create simple pages without much interactivity. But it is nevertheless worth double checking what happens when you try to navigate through all controls on the site via the Tab key.</p>
+</section>
+<section id="navigation" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="navigation"><span class="header-section-number">3.2.2</span> Navigation</h3>
+<p>The table of contents is currently split into two parts. On the left sidebar we show the chapter titles, and on the right sidebar we show the headers within a chapter. This is confusing when using a screen reader because the navigation links aren’t all listed together, nor do they align with the overall hierarchy of sections. A unified table of contents should be implemented in the template so that developers of Datalab workshops don’t have to do any custom coding in order to get accessibility right. Unfortunately, the</p>
 
 
 </section>

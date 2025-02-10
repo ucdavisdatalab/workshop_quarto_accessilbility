@@ -24,7 +24,7 @@ The most popular third-party screen readers are [JAWS](https://www.freedomscient
 ### Using a Screen Reader
 The most basic function of a screen reader is to read text aloud to the user from the computer's display. Typically, someone reading one of our workshops would listen to one line of text then hit the down arrow to go to the next line and have the reader read it aloud to them. When the user arrives at an element that is not text, the screen reader tries to describe it to them. See the image for an example of the basic interface of VoiceOver. In the image, the line of text "searching, and running code. You can do all of these things without RStudio, but" is highlighted with a black box around the text and this same text appears in the floating VoiceOver window. VoiceOver reads this text aloud.
 
-![An image depicting the computer desktop of a user who is reading the Datalab's R Basics workshop. A line of text from the workshop is highlighted in the web browser and is also copied into a foating VoiceOver box.](../../images/voiceover.jpg)
+![An image depicting the computer desktop of a user who is reading the Datalab's R Basics workshop. A line of text from the workshop is highlighted in the web browser and is also copied into a foating VoiceOver box.](/images/voiceover.jpg)
 
 #### Alt Text and ARIA Attributes
 For example, when the user scrolls to an image, the screen reader will read the "[alt text](https://accessibility.huit.harvard.edu/describe-content-images)" of the image as if it were text in the place of the image. Alt text is also what is displayed in place of the image if the image fails to load. Therefore think of the alt text as the text appearing in place of the image. Since the browser and scren reader will know that the alt text is associted with a specific image, there is no need to include wind-up like "This is an image of...". The [Harvard alt text best practices](https://accessibility.huit.harvard.edu/describe-content-images) are wonderfuly clear and direct, so I will just reproduce them here:
@@ -41,9 +41,9 @@ ARIA attributes are another way of inserting text descriptions for visual elemen
 #### Navigation Menus
 Screen readers incorporate navigation menus to faciitate quick navigation to important parts of the window. When used within a web browser, the navigaton menus allow the user to quickly move to section headings, links, buttons, etc. In VoiceOver, the navigation menu is called the "rotor", and is activated by the key combination Control+Option-U (assumes VoiceOver is already running). In Narrator, the navigation menu is activated with the key combo Caps Lock+F6. See the images for examples of how chapter one of the R Basics reader appears in the navigation menu.
 
-![Image of the section headings menu presented by VoiceOver on macOS. The headers are for chapter one of the Datalab's "R Basics" workshop, and include entries like "3: 1.2.4 Calling Functions Anchor" and "2 1.3 Getting Help Anchor".](../../images/headings_screenshot.jpg)
+![Image of the section headings menu presented by VoiceOver on macOS. The headers are for chapter one of the Datalab's "R Basics" workshop, and include entries like "3: 1.2.4 Calling Functions Anchor" and "2 1.3 Getting Help Anchor".](/images/headings_screenshot.jpg)
 
-![Image of the form controls menu presented by VoiceOver on macOS. There are controls for site search ("Submit button" and "Submit search text field") and several (about ten) appearances of controls called "Copy to clipboard button".](../../images/form_controls_screenshot.jpg)
+![Image of the form controls menu presented by VoiceOver on macOS. There are controls for site search ("Submit button" and "Submit search text field") and several (about ten) appearances of controls called "Copy to clipboard button".](/images/form_controls_screenshot.jpg)
 
 The navigation menus in VoiceOver on macOS are:
 - Headings
