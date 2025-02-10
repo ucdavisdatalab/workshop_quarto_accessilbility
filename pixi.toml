@@ -1,0 +1,17 @@
+[project]
+authors = ["Wes B <wbrooks@ucdavis.edu>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "workshop_quarto_accessilbility"
+platforms = ["osx-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+quarto = ">=1.6.40,<2"
+r = ">=4.4,<4.5"
+palmerpenguins = ">=0.1.4,<0.2"
+r-ggplot2 = ">=3.5.1,<4"
+r-gt = ">=0.11.1,<0.12"
+r-palmerpenguins = ">=0.1.1,<0.2"
